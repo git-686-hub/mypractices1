@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="context1">
+
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<jdbcConnection driverClass="{driverclass}"
+			connectionURL="{url}" userId="{userName}" password="{password}" />
+
+		<javaModelGenerator targetPackage="{com.xx.xxx.xx}"
+			targetProject="{项目名称}">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		
+		<sqlMapGenerator targetPackage="???"
+			targetProject="???" />
+			
+		<javaClientGenerator targetPackage="???"
+			targetProject="???" type="XMLMAPPER" />
+			
+		<table schema="???" tableName="???">
+			<!-- 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格 -->
+			<property name="useActualColumnNames" value="false" />
+			<columnOverride column="???" property="???" />
+		</table>
+	</context>
+</generatorConfiguration>
